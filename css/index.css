@@ -38,7 +38,6 @@ header
 =============================
 */
 .header {
-  height: 90px;
   background: #0f0f0f;
   padding: 15px 0;
 }
@@ -67,7 +66,6 @@ logo
 
 .logo-link {
   display: block;
-  height: 60px;
 }
 
 /*
@@ -233,12 +231,14 @@ hero
 
 .layer-group-left {
   top: 8%;
-  left: calc(-100% / 4.5);
+  left: 50%;
+  transform: translateX( calc((-50%) - (100% / 2) - 100px));
 }
 
 .layer-group-right {
   bottom: -7%;
-  right: -5%;
+  right: 50%;
+  transform: translateX( calc((50%) + (100% / 2) + 130px));
 }
 
 .layer-salt {
@@ -254,12 +254,14 @@ hero
 
 .layer-leaflet-large {
   top: 14%;
-  left: 18%;
+  left: 50%;
+  transform: translateX(calc((-50%) - (100% / 2) - 280px));
 }
 
 .layer-sushi-element {
   top: 10%;
-  right: -5%;
+  right: 50%;
+  transform: translateX( calc((50%) + (100% + 462px)));
 }
 
 /*
@@ -313,6 +315,12 @@ section order
 
 .tile-box .tile-box__images {
   display: table-cell;
+  vertical-align: middle;
+}
+
+.picture {
+  display: inline-block;
+  max-width: 100%;
   vertical-align: middle;
 }
 
@@ -390,7 +398,13 @@ section news
 }
 
 .news-post {
+  float: left;
   margin-bottom: 30px;
+  margin-right: 0;
+}
+
+.news-post:first-child {
+  margin-right: 30px;
 }
 
 .news-post__promo {
@@ -470,8 +484,7 @@ footer
 */
 .footer {
   background: #282828;
-  height: 190px;
-  padding-top: 50px;
+  padding: 45px 0 40px 0;
 }
 
 .foo-logo,
@@ -503,6 +516,7 @@ footer
 
 .foo-icons .contact-icons {
   padding-top: 15px;
+  padding-bottom: 0;
 }
 
 .foo-phones {
@@ -524,14 +538,6 @@ misc
   text-align: center;
 }
 
-.padding-r {
-  padding-right: 15px;
-}
-
-.padding-l {
-  padding-left: 15px;
-}
-
 .mrgn-none {
   margin: 0;
 }
@@ -546,12 +552,6 @@ misc
   clear: both;
 }
 
-.side-left-w-50 {
+.col-width-50 {
   width: calc(50% - 15px);
-}
-
-img {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;
 }
