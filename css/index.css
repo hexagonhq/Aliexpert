@@ -30,6 +30,8 @@ body {
 .x-container {
   width: 100%;
   max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
@@ -40,6 +42,7 @@ header
 .header {
   background: #0f0f0f;
   padding: 15px 0;
+  position: relative;
 }
 
 .side-left,
@@ -56,14 +59,73 @@ header
 }
 
 /*
+hamburger-menu
+=============================
+*/
+.hamburger-menu {
+  display: none;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: calc((90px / 2) - 25px / 2);
+  right: 15px;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger__plank {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: calc(35px / 3);
+  left: 0;
+  transition: left 250ms cubic-bezier(0.52, 0.16, 0.24, 1), right 250ms cubic-bezier(0.52, 0.16, 0.24, 1);
+}
+
+.hamburger__plank:first-child {
+  width: 50%;
+  top: 0;
+}
+
+.hamburger__plank:last-child {
+  width: 50%;
+  top: calc(35px / 1.5);
+  left: auto;
+  right: 0;
+}
+
+.menu-state {
+  display: none;
+}
+
+.menu-state:checked ~ .header .nav {
+  display: block;
+}
+
+.menu-state:checked ~ .header .side-left {
+  float: none;
+}
+
+.menu-state:checked ~ .header .hamburger-menu .hamburger__plank:first-child {
+  left: 50%;
+}
+
+.menu-state:checked ~ .header .hamburger-menu .hamburger__plank:last-child {
+  right: 50%;
+}
+
+/*
 logo
 =============================
 */
-.header-logo {
-  width: 100%;
-  max-width: 270px;
-}
-
 .logo-link {
   display: block;
 }
@@ -73,12 +135,12 @@ navigation
 =============================
 */
 .nav {
-  margin-left: 30px;
+  margin-left: 90px;
   padding: calc((60px / 2) - (22px / 2)) 0;
 }
 
 .nav-list__item {
-  margin-right: 40px;
+  margin-right: 35px;
 }
 
 .nav-list__item:last-child {
@@ -99,7 +161,7 @@ contact icons
 */
 .contact-icons {
   height: 60px;
-  margin-left: 45px;
+  margin-left: 40px;
   padding: calc((60px / 2) - (22px / 2)) 0;
 }
 
@@ -183,9 +245,10 @@ hero
 =============================
 */
 .hero {
+  width: 100%;
+  min-height: 610px;
   position: relative;
   background: transparent url("../img/hero/home-hiro.jpg") no-repeat center/cover;
-  min-height: 610px;
   overflow: hidden;
 }
 
@@ -297,7 +360,7 @@ section order
 
 .tile-produt__item {
   width: 20%;
-  padding: 82px 15px 0 15px;
+  padding: 82px 0 0 0;
   border-right: 1px solid #323232;
   border-bottom: 1px solid #323232;
   background: #0f0f0f;
@@ -309,7 +372,8 @@ section order
 .tile-box {
   display: table;
   width: 100%;
-  min-height: 180px;
+  min-height: 185px;
+  padding: 0 15px;
   text-align: center;
 }
 
@@ -340,6 +404,7 @@ section order
 .tile-rest__button {
   margin-top: 30px;
   margin-bottom: -25px;
+  padding: 0 4px;
 }
 
 .btn {
@@ -347,9 +412,12 @@ section order
   position: relative;
   font-size: 15px;
   font-weight: 500;
+  line-height: 55px;
+  text-align: left;
+  text-decoration: none;
+  padding-left: 35px;
   color: #fff;
   background: #f32121;
-  text-align: center;
   width: 100%;
   max-width: 200px;
   height: 55px;
@@ -362,12 +430,11 @@ section order
 }
 
 .btn-medium {
+  line-height: 42px;
+  text-align: center;
+  padding-left: 0;
   max-width: 152px;
   height: 42px;
-}
-
-.btn-icon {
-  position: relative;
 }
 
 .btn-icon::after {
@@ -429,8 +496,13 @@ section news
   display: block;
   font-size: 13px;
   color: #dcd9d9;
-  margin-top: 20px;
+  margin-left: 30px;
   float: left;
+}
+
+.news-post:first-child .publication-date {
+  margin-top: 20px;
+  margin-left: 0;
 }
 
 .icon-calendar::before {
@@ -458,6 +530,8 @@ section news
   font-size: 13px;
   line-height: 1.4;
   color: #dcd9d9;
+  max-height: 110px;
+  overflow: hidden;
   margin-top: 7px;
 }
 
@@ -472,9 +546,14 @@ section news
 
 .news-post__content {
   display: inline-block;
+  margin-left: 30px;
 }
 
-.ui-width-50 {
+.news-post:first-child .news-post__content {
+  margin-left: 0;
+}
+
+.ui-width {
   width: calc((100% / 2) - 15px);
 }
 
@@ -493,12 +572,8 @@ footer
   float: left;
 }
 
-.foo-logo {
-  width: 270px;
-}
-
 .foo-contact {
-  width: calc(100% - (270px + 170px));
+  width: calc(100% - (206px + 170px));
   margin-top: -5px;
 }
 
@@ -515,8 +590,8 @@ footer
 }
 
 .foo-icons .contact-icons {
-  padding-top: 15px;
-  padding-bottom: 0;
+  margin: 15px 0 0 0;
+  padding: 0;
 }
 
 .foo-phones {
@@ -538,20 +613,12 @@ misc
   text-align: center;
 }
 
-.mrgn-none {
-  margin: 0;
-}
-
-.mrgn-l {
-  margin-left: 30px;
-}
-
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.col-width-50 {
+.col-width {
   width: calc(50% - 15px);
 }

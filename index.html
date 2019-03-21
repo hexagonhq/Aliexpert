@@ -188,14 +188,16 @@
     }
   </style>
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
+  <input type="checkbox" id="menu-state" class="menu-state">
   <header class="header">
     <div class="x-container clearfix">
 
-      <div class="side-left header-logo">
+      <div class="side-left">
         <a href="/" class="logo-link">
-          <img src="./img/logo/logo.png" alt="omg">
+          <img src="./img/logo/logo.png" class="picture" alt="omg">
         </a>
       </div>
 
@@ -259,6 +261,14 @@
           </a>
           <div class="time-work">Працюэмо з 11:00 до 23:00</div>
         </div>
+
+        <div class="hamburger-menu">
+          <label for="menu-state" class="hamburger">
+            <span class="hamburger__plank"></span>
+            <span class="hamburger__plank"></span>
+            <span class="hamburger__plank"></span>
+          </label>
+        </div>
       </div>
 
     </div>
@@ -312,7 +322,7 @@
                 Сети
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -327,7 +337,7 @@
                 Роли
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -342,7 +352,7 @@
                 Супи
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -357,7 +367,7 @@
                 Удони
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -372,7 +382,7 @@
                 Удони
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -387,7 +397,7 @@
                 Салати
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -402,7 +412,7 @@
                 Гарячі страви
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -417,7 +427,7 @@
                 Інші страви
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -432,7 +442,7 @@
                 Десерты
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -447,7 +457,7 @@
                 Удони
               </a>
               <div class="tile-rest__button">
-                <button type="button" class="btn btn-icon">Переглянути</button>
+                <a href="javascript:void(0);" class="btn btn-icon">Переглянути</a>
               </div>
             </div>
           </li>
@@ -458,7 +468,7 @@
       <div class="x-container clearfix">
         <h2 class="section-title align-center">Новини</h2>
         <div class="wrapper-news clearfix">
-          <div class="news-post col-width-50">
+          <div class="news-post col-width">
             <a href="javascript:void(0);" class="news-post__promo news-post__image--special"></a>
             <span class="publication-date icon-calendar">
               11.03.2019
@@ -471,17 +481,17 @@
                 Суші-бар «Kioto Rich» - успішний проект 2009 року, зустрічає гостей стравами японської, європейської, авторської кухнями. Невимушена, легка атмосфера, позитивна енергетика, підтримується оригінальним дизайном «industrial», панорамними вікнами, які відкривають динамічний пейзаж центру міста, традиційними японськими ритмами і lounge музикою.
               </p>
               <div class="news-post__button">
-                <button type="button" class="btn btn-medium">Детальніше</button>
+                <a href="javascript:void(0);" class="btn btn-medium">Детальніше</a>
               </div>
             </div>
           </div>
 
-          <div class="news-post col-width-50 clearfix">
-            <a href="javascript:void(0);" class="news-post__promo news-post__promo--part news-post__image--news-menu ui-width-50"></a>
-            <span class="publication-date icon-calendar mrgn-l mrgn-none">
+          <div class="news-post col-width clearfix">
+            <a href="javascript:void(0);" class="news-post__promo news-post__promo--part news-post__image--news-menu ui-width"></a>
+            <span class="publication-date icon-calendar mrgn-l">
               11.03.2019
             </span>
-            <div class="news-post__content mrgn-l ui-width-50">
+            <div class="news-post__content ui-width">
               <a href="javascript:void(0);" class="news-post__title">
                 Нове меню.<br>Вже скоро!
               </a>
@@ -489,17 +499,17 @@
                 Свята, що наближаються надихають нас на нові прагнення і відкриття. І вже зовсім скоро ми презентуємо для наших гостей нове меню ресторану «KiotoRich».
               </p>
               <div class="news-post__button">
-                <button type="button" class="btn btn-medium">Детальніше</button>
+                <a href="javascript:void(0);" class="btn btn-medium">Детальніше</a>
               </div>
             </div>
           </div>
 
-          <div class="news-post col-width-50">
-            <a href="javascript:void(0);" class="news-post__promo news-post__promo--part news-post__image--8-years ui-width-50"></a>
-              <span class="publication-date icon-calendar mrgn-l mrgn-none">
+          <div class="news-post col-width">
+            <a href="javascript:void(0);" class="news-post__promo news-post__promo--part news-post__image--8-years ui-width"></a>
+              <span class="publication-date icon-calendar">
                 11.03.2019
               </span>
-            <div class="news-post__content mrgn-l ui-width-50">
+            <div class="news-post__content ui-width">
               <a href="javascript:void(0);" class="news-post__title">
                 Уявляєте, ми разом <br> вже 8 років.
               </a>
@@ -507,7 +517,7 @@
                 За 8 років роботи нашого ресторану ви багаторазово показали нам своє добре ставлення. Ми вдячні вам за вашу довіру!
               </p>
               <div class="news-post__button">
-                <button type="button" class="btn btn-medium">Детальніше</button>
+                <a href="javascript:void(0);" class="btn btn-medium">Детальніше</a>
               </div>
             </div>
           </div>
@@ -529,7 +539,7 @@
         </address>
         <div class="time-work foo-time-work">Працюэмо з 11:00 до 23:00</div>
         <div class="foo-icons align-center clearfix">
-          <ul class="contact-icons mrgn-none">
+          <ul class="contact-icons">
             <li class="contact-icons__item">
               <a href="javascript:void(0);" class="contact-icons__link">
                 <span class="cont-icon icon-vk"></span>
