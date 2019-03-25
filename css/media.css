@@ -3,15 +3,7 @@ header
 ==================================
 */
 @media screen and (max-width: 1200px) {
-  .side-right {
-    width: calc(100% - 206px);
-  }
-
-  .nav {
-    margin-left: 85px;
-  }
-
-  .nav-list__item, .contact-icons__item {
+  .nav-list__item {
     float: none;
     display: inline-block;
   }
@@ -21,37 +13,13 @@ header
   }
 }
 
-@media screen and (max-width: 991px) {
-  .side-right {
-    width: 100%;
-    float: none;
-    clear: both;
-  }
-
-  .nav {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-
-  .contact-icons,
-  .info {
-    float: none;
-    clear: both;
-    text-align: center;
-  }
-
-  .info {
-    margin-left: 0;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .nav {
     display: none;
-    float: none;
-    margin-left: 0;
-    position: static;
+  }
+
+  .nav-list {
+    flex-direction: column;
   }
 
   .nav-list__item {
@@ -62,6 +30,35 @@ header
 
   .nav-list__link {
     padding: 15px 0;
+  }
+
+  .contact-icons,
+  .info {
+    margin-left: auto;
+  }
+
+  .info {
+    margin-right: calc(35px + 25px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header-content {
+    display: block;
+  }
+
+  .logo {
+    max-width: 170px;
+  }
+
+  .contact-icons {
+    justify-content: center;
+    margin: 20px 0 15px 0;
+  }
+
+  .info {
+    text-align: center;
+    margin: 0;
   }
 }
 
@@ -75,17 +72,15 @@ hamburger-menu
   }
 
   .hamburger-menu {
-    top: calc((60px / 2) - 25px / 2);
+    top: calc(15px + 35px / 3);
   }
 }
 
-/*
-logo
-=============================
-*/
 @media screen and (max-width: 767px) {
-  .side-left {
-    max-width: 150px;
+  .hamburger-menu {
+    position: absolute;
+    top: 30px;
+    right: 15px;
   }
 }
 
@@ -224,13 +219,8 @@ footer
 ==================================
 */
 @media screen and (max-width: 767px) {
-  .foo-contact {
-    width: calc(100% -  207px);
-    text-align: right;
-  }
-
-  .contact-icons {
-    margin-left: 0;
+  .footer-content {
+    flex-wrap: wrap;
   }
 
   .foo-phones {
@@ -242,12 +232,9 @@ footer
 }
 
 @media screen and (max-width: 650px) {
-  .foo-logo,
-  .foo-contact,
-  .foo-phones {
-    float: none;
-    width: 100%;
-    text-align: center;
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
 
   .foo-contact {
